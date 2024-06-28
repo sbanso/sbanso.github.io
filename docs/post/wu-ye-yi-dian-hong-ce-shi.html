@@ -9,14 +9,18 @@
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
     </script>
-<meta name="description" content="You are the one!。">
+<meta name="description" content="# 盘点AI大模型接入微信的方法，全网最全最细喂饭级教程
+
+如何将ChatGPT等AI接入微信，这应该是全网最全最细的视频教程了。">
 <meta property="og:title" content="午夜一点红测试">
-<meta property="og:description" content="You are the one!。">
+<meta property="og:description" content="# 盘点AI大模型接入微信的方法，全网最全最细喂饭级教程
+
+如何将ChatGPT等AI接入微信，这应该是全网最全最细的视频教程了。">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://sbanso.github.io/post/wu-ye-yi-dian-hong-ce-shi.html">
 <meta property="og:image" content="https://avatars.githubusercontent.com/u/128622684?v=4">
 <title>午夜一点红测试</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 </head>
 <style>
@@ -70,7 +74,283 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </div>
 </div>
     <div id="content">
-<div class="markdown-body" id="postBody"><p>You are the one!</p></div>
+<div class="markdown-body" id="postBody"><h1>盘点AI大模型接入微信的方法，全网最全最细喂饭级教程</h1>
+<p>如何将ChatGPT等AI接入微信，这应该是全网最全最细的视频教程了。<br>目前将AI大模型接入微信主要有三个主流方向， 分别是企业微信，公众号， 还有个人微信。<br>这里面企业微信分为企业机器人与企业客服两个子流派。公众号又分为订阅号与服务号两个子流派。<br>这样加起来总共是五个流派，我用一个表格列举了他们的优缺点。</p>
+<table role="table">
+<thead>
+<tr>
+<th>方案</th>
+<th>优点</th>
+<th>缺点</th>
+<th>成本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>企业微信机器人</td>
+<td>微信官方API，安全稳定</td>
+<td>必须先加入对应的企业，才能使用。<br>配置繁琐<br>无法参与群聊</td>
+<td>公网IP的云服务器</td>
+</tr>
+<tr>
+<td>企业微信客服</td>
+<td>微信官方API，安全稳定<br>不用加入企业，点开即用</td>
+<td>未认证的企业只能服务100个人<br>配置繁琐<br>无法参与群聊</td>
+<td>公网IP的云服务器</td>
+</tr>
+<tr>
+<td>公众号订阅号</td>
+<td>微信官方API，安全稳定</td>
+<td>公众号有超时限制，有字数限制<br>无法参与群聊</td>
+<td>公网IP的云服务器<br></td>
+</tr>
+<tr>
+<td>公众号服务号</td>
+<td>微信官方API，安全稳定</td>
+<td>无法参与群聊<br>成本较高</td>
+<td>公网IP的云服务器<br>服务号认证费用<br>营业执照</td>
+</tr>
+<tr>
+<td>个人微信</td>
+<td>可以参与群聊<br>可以加好友<br>部署成本低<br>普通微信号的一切功能</td>
+<td>给账号带来风险，建议用小号<br></td>
+<td>任意服务器/电脑即可</td>
+</tr>
+</tbody>
+</table>
+<p><a name="user-content-izkex"></a></p>
+<h1>企业微信</h1>
+<p>项目主页：<a href="https://github.com/zhayujie/chatgpt-on-wechat">https://github.com/zhayujie/chatgpt-on-wechat</a><br>项目文档：<a href="https://docs.link-ai.tech/cow/quick-start" rel="nofollow">https://docs.link-ai.tech/cow/quick-start</a><br>
+<a name="user-content-xkill"></a></p>
+<h2>注册企业微信</h2>
+<p><a href="https://work.weixin.qq.com/wework_admin/register_wx?from=loginpage" rel="nofollow">https://work.weixin.qq.com/wework_admin/register_wx?from=loginpage</a><br>
+<a name="user-content-sjj5s"></a></p>
+<h2>创建企业机器人</h2>
+<p>应用管理--&gt;应用--&gt;创建应用 ，应用名称跟描述随便填,可见范围选整个公司<br>这样就创建好了一个企业机器人。<br><br>
+<a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/1.png"><img src="/doc/images/240627/1.png" alt="" style="max-width: 100%;"></a><br>
+<a name="user-content-wdctl"></a></p>
+<h2>配置可信域名</h2>
+<p>如果未认证的企业可以使用华为云的域名，认证企业则必须使用企业自己的域名<br>
+<a name="user-content-r1eez"></a></p>
+<h3>登陆华为云</h3>
+<p><a href="https://activity.huaweicloud.com/" rel="nofollow">https://activity.huaweicloud.com/</a> ，完成实名认证<br>
+<a name="user-content-ankze"></a></p>
+<h3>创建云函数</h3>
+<p>搜索云函数，点击立即使用。右上角创建函数，选择HTTP函数，函数名称随便填。 <br><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/2.png"><img src="/doc/images/240627/2.png" alt="" style="max-width: 100%;"></a><br>
+<a name="user-content-xa6ox"></a></p>
+<h3>创建触发器</h3>
+<p>切换到设置 触发器-创建触发器<br><br>
+<a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/3.png"><img src="/doc/images/240627/3.png" alt="" style="max-width: 100%;"></a><br><br>
+安全认证选None ，分组随意创建一个<br><br>
+<a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/4.png"><img src="/doc/images/240627/4.png" alt="" style="max-width: 100%;"></a></p>
+<p><a name="user-content-t6wm9"></a></p>
+<h3>获得URL</h3>
+<p><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/5.png"><img src="/doc/images/240627/5.png" alt="" style="max-width: 100%;"></a><br></p>
+<p>下一步 打开企业微信 --&gt;进入刚才创建的机器人--&gt;设置可信域名<br></p>
+<p><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/6.png"><img src="/doc/images/240627/6.png" alt="" style="max-width: 100%;"></a><br></p>
+<p>可信域名填3.4步骤中的URL，类似以下格式（注意去掉http:// 与 最后的/<br></p>
+<blockquote>
+<p>d1c0cceabb04d8e8413c2b615790846.apig.cn-north-1.huaweicloudapis.com</p>
+</blockquote>
+<p><a name="user-content-ve9vy"></a></p>
+<h3>获得校验码</h3>
+<p>点击申请校验域名-&gt;下载文件, 将文件里面的校验复制下来  大约长这样： <strong>1tg27Cpi9hYTjFFq</strong><br><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/7.png"><img src="/doc/images/240627/7.png" alt="" style="max-width: 100%;"></a><br>
+<a name="user-content-eslpb"></a></p>
+<h3>绑定可信域名</h3>
+<p>回到华为云，  代码-&gt;index.js 修改第九行为文件里的校验码（见3.5小节获得的校验码），点击部署<br><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/8.png"><img src="/doc/images/240627/8.png" alt="" style="max-width: 100%;"></a><br>部署完成 回到企业微信-&gt;点击确定  可信域名即完成绑定</p>
+<p><a name="user-content-g71rc"></a></p>
+<h2>Gemini对接企业微信</h2>
+<p>我们使用这个项目  chatgpt-on-wechat<br><a href="https://github.com/zhayujie/chatgpt-on-wechat">https://github.com/zhayujie/chatgpt-on-wechat</a></p>
+<p><a name="user-content-zu9h7"></a></p>
+<h3>申请Google Gemini</h3>
+<p>申请一个API key<br><a href="https://makersuite.google.com/app/apikey" rel="nofollow">https://makersuite.google.com/app/apikey</a></p>
+<blockquote>
+<p>需要一个Google账号，以及可以访问Google的网络环境<br><br>
+如果没有对应网络环境可以选择其他国内大模型</p>
+</blockquote>
+<p><a name="user-content-jrv9r"></a></p>
+<h3>安装docker</h3>
+<p>需要有一个公网IP的云服务器，安装docker<br>安装docker可以参考这个视频<br><a href="https://www.bilibili.com/video/BV1fS411A71Y/" rel="nofollow">https://www.bilibili.com/video/BV1fS411A71Y/</a><br>也可以参考这个<br><a href="https://github.com/tech-shrimp/docker_installer">https://github.com/tech-shrimp/docker_installer</a></p>
+<blockquote>
+<p>使用Gemini, 服务器需要访问Google的网络环境<br><br>
+如果没有对应网络环境可以选择其他国内大模型</p>
+</blockquote>
+<p><a name="user-content-hevbq"></a></p>
+<h3>下载docker compose</h3>
+<p>执行以下命令下载 docker-compose.yml：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">wget https://open-1317903499.cos.ap-guangzhou.myqcloud.com/docker-compose.yml
+</pre></div>
+<p>修改docker compose文件，主要配置从24行以下开始</p>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">version</span>: <span class="pl-s"><span class="pl-pds">'</span>2.0<span class="pl-pds">'</span></span>
+<span class="pl-ent">services</span>:
+  <span class="pl-ent">chatgpt-on-wechat</span>:
+    <span class="pl-ent">image</span>: <span class="pl-s">zhayujie/chatgpt-on-wechat</span>
+    <span class="pl-ent">container_name</span>: <span class="pl-s">chatgpt-on-wechat</span>
+    <span class="pl-ent">security_opt</span>:
+      - <span class="pl-s">seccomp:unconfined</span>
+    <span class="pl-ent">environment</span>:
+      <span class="pl-ent">OPEN_AI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span>YOUR KEY<span class="pl-pds">'</span></span>
+      <span class="pl-ent">PROXY</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-ent">SINGLE_CHAT_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>[""]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">SINGLE_CHAT_REPLY_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>"[bot] "<span class="pl-pds">'</span></span>
+      <span class="pl-ent">GROUP_CHAT_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>["@bot"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">GROUP_NAME_WHITE_LIST</span>: <span class="pl-s"><span class="pl-pds">'</span>["测试群", "测试群2"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">IMAGE_CREATE_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>["画", "看", "找"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">CONVERSATION_MAX_TOKENS</span>: <span class="pl-c1">1000</span>
+      <span class="pl-ent">SPEECH_RECOGNITION</span>: <span class="pl-s"><span class="pl-pds">'</span>False<span class="pl-pds">'</span></span>
+      <span class="pl-ent">CHARACTER_DESC</span>: <span class="pl-s"><span class="pl-pds">'</span>你是基于大语言模型的AI智能助手，旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。<span class="pl-pds">'</span></span>
+      <span class="pl-ent">EXPIRES_IN_SECONDS</span>: <span class="pl-c1">3600</span>
+      <span class="pl-ent">USE_GLOBAL_PLUGIN_CONFIG</span>: <span class="pl-s"><span class="pl-pds">'</span>True<span class="pl-pds">'</span></span>
+      <span class="pl-ent">USE_LINKAI</span>: <span class="pl-s"><span class="pl-pds">'</span>False<span class="pl-pds">'</span></span>
+      <span class="pl-ent">LINKAI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-ent">LINKAI_APP_CODE</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span># 配置从以下开始</span>
+      <span class="pl-c"><span class="pl-c">#</span># 模型名称 注意此文件只保留一个模型名称，其余删掉</span>
+      <span class="pl-ent">MODEL</span>: <span class="pl-s"><span class="pl-pds">'</span>gemini<span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 4.1小节申请的 gemini api key</span>
+      <span class="pl-ent">GEMINI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<span class="pl-pds">'</span></span>
+      <span class="pl-ent">CHANNEL_TYPE</span>: <span class="pl-s"><span class="pl-pds">"</span>wechatcom_app<span class="pl-pds">"</span></span>                
+      <span class="pl-c"><span class="pl-c">#</span> 企业微信-&gt;我的企业-&gt;企业ID       </span>
+      <span class="pl-ent">WECHATCOM_CORP_ID</span>: <span class="pl-s"><span class="pl-pds">"</span>xxxxxxxxxxxxxxxxxx<span class="pl-pds">"</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 企业微信-&gt;应用管理-&gt;应用-&gt;Secret                      </span>
+      <span class="pl-ent">WECHATCOMAPP_SECRET</span>: <span class="pl-s"><span class="pl-pds">"</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<span class="pl-pds">"</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 企业微信-&gt;应用管理-&gt;应用-&gt;AgentId             </span>
+      <span class="pl-ent">WECHATCOMAPP_AGENT_ID</span>: <span class="pl-s"><span class="pl-pds">"</span>xxxxxx<span class="pl-pds">"</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 企业微信-&gt;应用管理-&gt;应用-&gt;接收消息-&gt;设置API接收-&gt;Token          </span>
+      <span class="pl-ent">WECHATCOMAPP_TOKEN</span>: <span class="pl-s"><span class="pl-pds">"</span>xxxxxxxxxxxxxxxxxxxxxxxxxx<span class="pl-pds">"</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 企业微信-&gt;应用管理-&gt;应用-&gt;接收消息-&gt;设置API接收-&gt;EncodingAESKey  </span>
+      <span class="pl-ent">WECHATCOMAPP_AES_KEY</span>: <span class="pl-s"><span class="pl-pds">"</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<span class="pl-pds">"</span></span>
+      <span class="pl-ent">WECHATCOMAPP_PORT"</span>: <span class="pl-c1">9898</span>       
+    <span class="pl-ent">ports</span>:
+      - <span class="pl-c1">9898:9898</span>
+</pre></div>
+<p><a name="user-content-mnjax"></a></p>
+<h3>启动docker</h3>
+<p>修改完成后将docker启动起来</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 启动docker</span>
+sudo docker compose up -d
+<span class="pl-c"><span class="pl-c">#</span> 查看日志</span>
+sudo docker logs -f chatgpt-on-wechat
+<span class="pl-c"><span class="pl-c">#</span> 停止docker 如果修改配置文件必须先停止再启动</span>
+sudo docker compose down</pre></div>
+<p><a name="user-content-vr7ke"></a></p>
+<h3>企业微信设置</h3>
+<p>回到企业微信，填写好URL  ,按如下格式</p>
+<blockquote>
+<p><a href="http://%E6%9C%8D%E5%8A%A1%E5%99%A8IP:9898/wxcomapp" rel="nofollow">http://服务器IP:9898/wxcomapp</a></p>
+</blockquote>
+<p>注意Token与EncodingAESKey与docker配置一致。</p>
+<p><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/9.png"><img src="/doc/images/240627/9.png" alt="" style="max-width: 100%;"></a></p>
+<p>点击企业可信IP，填入服务器的公网IP</p>
+<p><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/10.png"><img src="/doc/images/240627/10.png" alt="" style="max-width: 100%;"></a></p>
+<h3>微信加入企业</h3>
+<p>我的企业-&gt;微信插件-&gt;邀请关注 ，使用微信扫码即加入企业，然后就可以开始应用机器人</p>
+<h1>微信公众号</h1>
+<p><a name="user-content-uaj5a"></a></p>
+<h2>注册公众号</h2>
+<p><a href="https://mp.weixin.qq.com/" rel="nofollow">https://mp.weixin.qq.com/</a><br>
+<a name="user-content-h2epp"></a></p>
+<h3>获取环境变量</h3>
+<p>公众号-&gt;设置与开发-&gt;基本配置<br><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/11.png"><img src="/doc/images/240627/11.png" alt="" style="max-width: 100%;"></a><br>
+<a name="user-content-flcme"></a></p>
+<h2>Docker Compose</h2>
+<p>执行以下命令下载 docker-compose.yml：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">wget https://open-1317903499.cos.ap-guangzhou.myqcloud.com/docker-compose.yml</pre></div>
+<p>修改文件</p>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">version</span>: <span class="pl-s"><span class="pl-pds">'</span>2.0<span class="pl-pds">'</span></span>
+<span class="pl-ent">services</span>:
+  <span class="pl-ent">chatgpt-on-wechat</span>:
+    <span class="pl-ent">image</span>: <span class="pl-s">zhayujie/chatgpt-on-wechat</span>
+    <span class="pl-ent">container_name</span>: <span class="pl-s">chatgpt-on-wechat</span>
+    <span class="pl-ent">security_opt</span>:
+      - <span class="pl-s">seccomp:unconfined</span>
+    <span class="pl-ent">environment</span>:
+      <span class="pl-ent">OPEN_AI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span>YOUR API KEY<span class="pl-pds">'</span></span>
+      <span class="pl-ent">PROXY</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-ent">SINGLE_CHAT_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>[""]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">SINGLE_CHAT_REPLY_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>"[bot] "<span class="pl-pds">'</span></span>
+      <span class="pl-ent">GROUP_CHAT_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>["@bot"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">GROUP_NAME_WHITE_LIST</span>: <span class="pl-s"><span class="pl-pds">'</span>["ChatGPT测试群", "ChatGPT测试群2"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">IMAGE_CREATE_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>["画", "看", "找"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">CONVERSATION_MAX_TOKENS</span>: <span class="pl-c1">1000</span>
+      <span class="pl-ent">SPEECH_RECOGNITION</span>: <span class="pl-s"><span class="pl-pds">'</span>False<span class="pl-pds">'</span></span>
+      <span class="pl-ent">CHARACTER_DESC</span>: <span class="pl-s"><span class="pl-pds">'</span>你是基于大语言模型的AI智能助手，旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。<span class="pl-pds">'</span></span>
+      <span class="pl-ent">EXPIRES_IN_SECONDS</span>: <span class="pl-c1">3600</span>
+      <span class="pl-ent">USE_GLOBAL_PLUGIN_CONFIG</span>: <span class="pl-s"><span class="pl-pds">'</span>True<span class="pl-pds">'</span></span>
+      <span class="pl-ent">USE_LINKAI</span>: <span class="pl-s"><span class="pl-pds">'</span>False<span class="pl-pds">'</span></span>
+      <span class="pl-ent">LINKAI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-ent">LINKAI_APP_CODE</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span># 配置从以下开始</span>
+      <span class="pl-c"><span class="pl-c">#</span># 模型名称 注意此文件只保留一个模型名称，其余删掉</span>
+      <span class="pl-ent">MODEL</span>: <span class="pl-s"><span class="pl-pds">'</span>gemini<span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 申请的 gemini api key</span>
+      <span class="pl-ent">GEMINI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<span class="pl-pds">'</span></span>
+      <span class="pl-ent">CHANNEL_TYPE</span>: <span class="pl-s"><span class="pl-pds">'</span>wechatmp<span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 公众号-&gt;设置与开发-&gt;基本配置-&gt;开发者ID</span>
+      <span class="pl-ent">WECHATMP_APP_ID</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxxxxxxxxx<span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 公众号-&gt;设置与开发-&gt;基本配置-&gt;开发者密码</span>
+      <span class="pl-ent">WECHATMP_APP_SECRET</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 公众号-&gt;设置与开发-&gt;基本配置-&gt;服务器配置-&gt;EncodingAESKey(可以随机生成)</span>
+      <span class="pl-ent">WECHATMP_AES_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 公众号-&gt;设置与开发-&gt;基本配置-&gt;服务器配置-&gt;Token(可以任意填写)</span>
+      <span class="pl-ent">WECHATMP_TOKEN</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxx<span class="pl-pds">'</span></span>
+      <span class="pl-ent">WECHATMP_PORT</span>: <span class="pl-c1">80</span>
+    <span class="pl-ent">ports</span>:
+      - <span class="pl-c1">80:80</span></pre></div>
+<p>启动docker</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 启动docker</span>
+sudo docker compose up -d
+<span class="pl-c"><span class="pl-c">#</span> 查看日志</span>
+sudo docker logs -f chatgpt-on-wechat
+<span class="pl-c"><span class="pl-c">#</span> 停止docker 如果修改配置文件必须先停止再启动</span>
+sudo docker compose down</pre></div>
+<p><a name="user-content-hac3j"></a></p>
+<h2>公众号完成配置</h2>
+<p>公众号-&gt;设置与开发-&gt;基本配置-&gt;服务器配置-&gt;修改配置<br>注意修改URL格式  <a href="http://%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%85%AC%E7%BD%91IP:80/wx" rel="nofollow">http://服务器公网IP:80/wx</a><br>Token &amp; EncodingAESKey 与 Docker Compose文件保持一致。<br>选择明文模式<br><a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/12.png"><img src="/doc/images/240627/12.png" alt="" style="max-width: 100%;"></a><br>最后提交即可。<br>如果提交不成功，请检查服务器防火墙，检查80端口是否暴露在公网。</p>
+<h1>个人微信</h1>
+<h2>Docker</h2>
+<p>执行以下命令下载 docker-compose.yml：</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate">wget https://open-1317903499.cos.ap-guangzhou.myqcloud.com/docker-compose.yml</pre></div>
+<p>修改文件</p>
+<div class="highlight highlight-source-yaml"><pre class="notranslate"><span class="pl-ent">version</span>: <span class="pl-s"><span class="pl-pds">'</span>2.0<span class="pl-pds">'</span></span>
+<span class="pl-ent">services</span>:
+  <span class="pl-ent">chatgpt-on-wechat</span>:
+    <span class="pl-ent">image</span>: <span class="pl-s">zhayujie/chatgpt-on-wechat</span>
+    <span class="pl-ent">container_name</span>: <span class="pl-s">chatgpt-on-wechat</span>
+    <span class="pl-ent">security_opt</span>:
+      - <span class="pl-s">seccomp:unconfined</span>
+    <span class="pl-ent">environment</span>:
+      <span class="pl-ent">OPEN_AI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span>YOUR API KEY<span class="pl-pds">'</span></span>
+      <span class="pl-ent">PROXY</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-ent">SINGLE_CHAT_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>[""]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">SINGLE_CHAT_REPLY_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>"[bot] "<span class="pl-pds">'</span></span>
+      <span class="pl-ent">GROUP_CHAT_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>["@bot"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">GROUP_NAME_WHITE_LIST</span>: <span class="pl-s"><span class="pl-pds">'</span>["ChatGPT测试群", "ChatGPT测试群2"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">IMAGE_CREATE_PREFIX</span>: <span class="pl-s"><span class="pl-pds">'</span>["画", "看", "找"]<span class="pl-pds">'</span></span>
+      <span class="pl-ent">CONVERSATION_MAX_TOKENS</span>: <span class="pl-c1">1000</span>
+      <span class="pl-ent">SPEECH_RECOGNITION</span>: <span class="pl-s"><span class="pl-pds">'</span>False<span class="pl-pds">'</span></span>
+      <span class="pl-ent">CHARACTER_DESC</span>: <span class="pl-s"><span class="pl-pds">'</span>你是基于大语言模型的AI智能助手，旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。<span class="pl-pds">'</span></span>
+      <span class="pl-ent">EXPIRES_IN_SECONDS</span>: <span class="pl-c1">3600</span>
+      <span class="pl-ent">USE_GLOBAL_PLUGIN_CONFIG</span>: <span class="pl-s"><span class="pl-pds">'</span>True<span class="pl-pds">'</span></span>
+      <span class="pl-ent">USE_LINKAI</span>: <span class="pl-s"><span class="pl-pds">'</span>False<span class="pl-pds">'</span></span>
+      <span class="pl-ent">LINKAI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-ent">LINKAI_APP_CODE</span>: <span class="pl-s"><span class="pl-pds">'</span><span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span># 配置从以下开始</span>
+      <span class="pl-ent">MODEL</span>: <span class="pl-s"><span class="pl-pds">'</span>gemini<span class="pl-pds">'</span></span>
+      <span class="pl-c"><span class="pl-c">#</span> 申请的 gemini api key</span>
+      <span class="pl-ent">GEMINI_API_KEY</span>: <span class="pl-s"><span class="pl-pds">'</span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx<span class="pl-pds">'</span></span>
+    <span class="pl-ent">ports</span>:
+      - <span class="pl-c1">9898:9898</span></pre></div>
+<p>启动docker</p>
+<div class="highlight highlight-source-shell"><pre class="notranslate"><span class="pl-c"><span class="pl-c">#</span> 启动docker</span>
+sudo docker compose up -d
+<span class="pl-c"><span class="pl-c">#</span> 查看日志 #扫码登录</span>
+sudo docker logs -f chatgpt-on-wechat</pre></div>
+<p><a name="user-content-bcuk1"></a></p>
+<h2>扫码登录</h2>
+<p>查看日志以后，屏幕上会出现一个登录二维码，扫这个二维码即可登录微信。<br><br>
+<a target="_blank" rel="noopener noreferrer" href="/doc/images/240627/13.png"><img src="/doc/images/240627/13.png" alt="" style="max-width: 100%;"></a><br><br>
+登录完成后，其他人与这个微信即可进行AI微信对话。<br></p></div>
 <div style="font-size:small;margin-top:8px;float:right;"></div>
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>

@@ -1,5 +1,22 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>午夜一点红的博客</title><link>https://sbanso.github.io</link><description>分享各种好东西</description><copyright>午夜一点红的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/128622684?v=4</url><title>avatar</title><link>https://sbanso.github.io</link></image><lastBuildDate>Sun, 30 Jun 2024 16:08:27 +0000</lastBuildDate><managingEditor>午夜一点红的博客</managingEditor><ttl>60</ttl><webMaster>午夜一点红的博客</webMaster><item><title>Hysteria 2 节点一键安装 Sing-box配置使用</title><link>https://sbanso.github.io/post/Hysteria%202%20-jie-dian-yi-jian-an-zhuang-%20Sing-box-pei-zhi-shi-yong.html</link><description>Hysteria 2 是一个比较新的协议，类似于v2ray，但可能比v2ray节点速度更快，支持全平台使用。</description><guid isPermaLink="true">https://sbanso.github.io/post/Hysteria%202%20-jie-dian-yi-jian-an-zhuang-%20Sing-box-pei-zhi-shi-yong.html</guid><pubDate>Sun, 30 Jun 2024 09:28:46 +0000</pubDate></item><item><title>盒子助手Docker版</title><link>https://sbanso.github.io/post/he-zi-zhu-shou-Docker-ban.html</link><description>&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>午夜一点红的博客</title><link>https://sbanso.github.io</link><description>分享各种好东西</description><copyright>午夜一点红的博客</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://avatars.githubusercontent.com/u/128622684?v=4</url><title>avatar</title><link>https://sbanso.github.io</link></image><lastBuildDate>Tue, 02 Jul 2024 08:41:52 +0000</lastBuildDate><managingEditor>午夜一点红的博客</managingEditor><ttl>60</ttl><webMaster>午夜一点红的博客</webMaster><item><title>Infinityfree虚拟主机申请SSL证书</title><link>https://sbanso.github.io/post/Infinityfree-xu-ni-zhu-ji-shen-qing-SSL-zheng-shu.html</link><description>申请SSL证书步骤：&#13;
+1. 点击面板中的SSL&#13;
+![image](https://github.com/sbanso/sbanso.github.io/assets/128622684/03a431fa-4354-4505-ba6f-1a6d7f871f8c)&#13;
+&#13;
+&#13;
+2. 点击配置&#13;
+![image](https://github.com/sbanso/sbanso.github.io/assets/128622684/e1e2f9c5-3bdb-46b2-92e3-9be0dcfdf5a2)&#13;
+&#13;
+&#13;
+3. 点击free SSL certificates 蓝色链接部分&#13;
+![image](https://github.com/sbanso/sbanso.github.io/assets/128622684/a1537881-b856-4ff7-bf5d-b1f262250f6f)&#13;
+&#13;
+&#13;
+4. 点击 New SSL Certificate，创建证书&#13;
+![image](https://github.com/sbanso/sbanso.github.io/assets/128622684/d832c94a-0f87-40e7-a99f-8467fc2e1dc4)&#13;
+&#13;
+&#13;
+5. 输入你创建主机时申请的二级域名，然后点击创建订单。</description><guid isPermaLink="true">https://sbanso.github.io/post/Infinityfree-xu-ni-zhu-ji-shen-qing-SSL-zheng-shu.html</guid><pubDate>Tue, 02 Jul 2024 08:41:31 +0000</pubDate></item><item><title>Hysteria 2 节点一键安装 Sing-box配置使用</title><link>https://sbanso.github.io/post/Hysteria%202%20-jie-dian-yi-jian-an-zhuang-%20Sing-box-pei-zhi-shi-yong.html</link><description>Hysteria 2 是一个比较新的协议，类似于v2ray，但可能比v2ray节点速度更快，支持全平台使用。</description><guid isPermaLink="true">https://sbanso.github.io/post/Hysteria%202%20-jie-dian-yi-jian-an-zhuang-%20Sing-box-pei-zhi-shi-yong.html</guid><pubDate>Sun, 30 Jun 2024 09:28:46 +0000</pubDate></item><item><title>盒子助手Docker版</title><link>https://sbanso.github.io/post/he-zi-zhu-shou-Docker-ban.html</link><description>&#13;
 🤔 这是什么？&#13;
 该项目可以让你使用电脑、NAS等一切能运行docker的设备变成盒子的ADB安装助手。</description><guid isPermaLink="true">https://sbanso.github.io/post/he-zi-zhu-shou-Docker-ban.html</guid><pubDate>Sun, 30 Jun 2024 09:22:43 +0000</pubDate></item><item><title>AI大模型接入微信</title><link>https://sbanso.github.io/post/AI-da-mo-xing-jie-ru-wei-xin.html</link><description># 盘点AI大模型接入微信的方法，喂饭级教程&#13;
 &#13;
